@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite --port 4444",
     "netlify": "netlify dev --port 3333 --targetPort 4444",
-    "build": "vite build",
+    "build": "vite build && cp sw.js dist/. && cp -r pwa/* dist/assets/.",
     "preview": "vite preview",
     "lint": "eslint .",
     "update": "TEST=true vite-node tools/update.ts",

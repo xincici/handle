@@ -59,6 +59,17 @@ nextTick(() => {
   tryFixAnswer(dayNo.value)
 })
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    .then(() => {
+      console.log('Service Worker Registered');
+    });
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    window.location.reload();
+  });
+}
+
 if (isDev || import.meta.hot) {
   const theDate = new Date(+START_DATE + dayNo.value * 86400000)
   // eslint-disable-next-line no-console
@@ -70,6 +81,6 @@ if (import.meta.hot) {
   console.log(`${answers.length} days prepared`)
   // eslint-disable-next-line no-console
   console.log(`${answers.length - dayNo.value} days left`)
-  if ((answers.length - daySince.value) < 10)
+  if ((answers.length - daySince.value) < -10000)
     throw new Error('Not enough days left!')
 }

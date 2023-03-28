@@ -6,6 +6,11 @@ const toggleDark = useToggle(isDark)
 const toggleSettings = useToggle(showSettings)
 const toggleDashboard = useToggle(showDashboard)
 
+const metaEl = document.querySelector('meta[name="theme-color"]')
+watch(isDark, val => {
+  metaEl.setAttribute('content', val ? '#121212' : '#fff')
+}, { immediate: true })
+
 function openHelp() {
   showHelp.value = true
   useMask.value = false

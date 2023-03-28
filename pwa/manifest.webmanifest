@@ -1,0 +1,16 @@
+{
+  "background_color": "purple",
+  "description": "Handle by antfu",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "hd_196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "name": "Handle by antfu",
+  "short_name": "Handle",
+  "start_url": "/",
+  "id": "handle-by-antfu"
+}
