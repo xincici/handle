@@ -1,5 +1,5 @@
 
-const cacheName = 'handle-v3';
+const cacheName = 'handle-v4';
 const cacheFileList = [
   '/index.html',
   '/favicon.svg',

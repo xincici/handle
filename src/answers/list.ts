@@ -521,7 +521,7 @@ export const _2023_FEB = prepare(28, seedShuffle([
 ], '2023-02'))
 
 export const answers: string[][] = [
-  ..._PRE,
+  // ..._PRE,
   ..._2022_JAN,
   ..._2022_FEB,
   ..._2022_MARCH,
