@@ -49,7 +49,7 @@ function prepare<T>(len: number, arr: T[]) {
   return arr
 }
 
-export const _PRE = prepare(1, [[]])
+export const _PRE = prepare(1, [['武运昌隆', '昌']])
 
 export const _2022_JAN = prepare(31, [
   ['路不拾遗', '遗'],
@@ -521,7 +521,7 @@ export const _2023_FEB = prepare(28, seedShuffle([
 ], '2023-02'))
 
 export const answers: string[][] = [
-  // ..._PRE,
+  ..._PRE,
   ..._2022_JAN,
   ..._2022_FEB,
   ..._2022_MARCH,
